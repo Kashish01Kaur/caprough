@@ -1,0 +1,123 @@
+<div class="container">
+  <h2 class="text-center mb-4">New to Trippin? Sign Up Here</h2>
+  <form [formGroup]="userData" (submit)="Register()" class="d-flex flex-column align-items-center">
+    <div class="form-group row">
+      <div class="col-lg-6 mb-3">
+        <input type="text" class="form-control" formControlName="firstName"
+          placeholder="First Name">
+      </div>
+      <div class="col-lg-6 mb-3">
+        <input type="text" class="form-control" formControlName="lastName"
+          placeholder="Last Name">
+      </div>
+      <div class="col-lg-12 mb-3">
+        <input type="email" class="form-control" formControlName="email"
+          placeholder="Email">
+      </div>
+      <div class="col-lg-12 mb-3">
+        <input type="password" class="form-control" formControlName="password"
+          placeholder="Password">
+      </div>
+      <div class="col-lg-12 mb-3">
+        <label>Role:</label>
+        <div>
+          <input type="radio" formControlName="role" value="user"> User
+        </div>
+      </div>
+      <div class="col-lg-12 mb-3">
+        <input type="tel" class="form-control" formControlName="contactNo"
+          placeholder="Contact Number">
+      </div>
+      <div class="col-lg-12 mb-3">
+        <input type="text" class="form-control" formControlName="travelExperienceLevel"
+          placeholder="Travel Experience Level">
+      </div>
+      <div class="col-lg-12 mb-3">
+        <input type="number" class="form-control" formControlName="travelBudget"
+          placeholder="Travel Budget">
+      </div>
+      <div class="col-lg-12 mb-4 text-center mt-3">
+        <button type="submit" [disabled]="!userData.valid" class="btn btn-primary btn-block">Sign Up</button>
+      </div>
+      <div class="col-lg-12">
+        <p class="text-center">Already a User? <a href="/userlogin">Sign In</a></p>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <div class="user-signup-container"> 
+    <form (submit)="onUserSignUp()">
+      <label>First Name</label>
+      <input type="text" required>
+      <br>
+      <label>Last Name</label>
+      <input type="text" required>
+      <br>
+      <label>Email</label>
+      <input type="email" required>
+      <br>
+      <label>Password</label>
+      <input type="password" required>
+      <br>
+      <label>Role</label>
+      <input type="text" value="user" readonly>
+      <br>
+      <label>Contact Number</label>
+      <input type="tel" required>
+      <br>
+      <label>Travel Experience Level</label>
+      <input type="text" required>
+      <br>
+      <label>Travel Budget</label>
+      <input type="number" required>
+      <br>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div> -->
+<!-- <p>userregister works!</p>
+<div class="user-signup-container"> 
+    <form [formGroup]="signUpForm" (ngSubmit)="onUserSignUp()">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input formControlName="firstName" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastName" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <input formControlName="role" matInput type="text" value="user" readonly>
+      </mat-form-field>
+      <br>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Contact Number</mat-label>
+        <input formControlName="contactNo" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Travel Experience Level</mat-label>
+        <input formControlName="travelExperienceLevel" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Travel Budget</mat-label>
+        <input formControlName="travelBudget" matInput type="number" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Sign Up</button>
+    </form>
+  </div> -->

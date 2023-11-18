@@ -1,0 +1,12 @@
+<p>activities works!</p>
+
+  <div class="container d-flex justify-content-start align-items-center mt-5 mb-5 " *ngFor = "let item of myActivities">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ item.activityImage}}" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{item.activityName}}</h5>
+          <p class="card-text">{{item.activityDescription}}</p>
+          <a href="#" class="btn btn-primary" [routerLink]>Add to Itenary</a>
+      </div>
+  </div>
+  </div>

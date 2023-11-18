@@ -1,0 +1,66 @@
+<p>userdashboard works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="top">
+    <div>
+        <a class="navbar-brand" href="#"><img src="" alt="trip"></a>
+    </div>
+    <div class="d-flex bar">
+        <div class="form-outline">
+            <form [formGroup]="searchPackage" class="form-inline ml-auto d-flex mt-1">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search Destinations"
+                        formControlName="searchTerm">
+                </div>
+                <div>
+                    <button class="btn btn-outline-light ml-2" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <div wishlist>
+            <a class="btn btn-outline-light btn-floating m-1 wishlist"  [routerLink]="'/itinerary'">Itinerary</a>
+        </div>
+    </div>
+</nav>
+<!-- <div class="container mt-5">
+    <div class="row">
+        <div *ngFor="let data of data" class="col-lg-4 mb-4 col">
+            <div class="card-body">
+                <h5 class="card-title">{{ data.destination }}</h5>
+                <p class="card-text">{{ data.destinationDescription }}</p>
+              </div>
+              <img src="{{ data.destinationImage }}" class="card-img-top" alt="{{ data.destination }}">
+        </div>
+    </div>
+</div> -->
+<!--Testing 
+    helooooooooooooooooooooooo
+<div class="col-md-4 mb-4">
+    <ul>
+        <li *ngFor="let message of messages">Hey</li>
+    </ul>
+    <ul>
+        <li *ngFor="let item of data">hellew</li>
+        <li>this is working</li>
+    </ul>
+</div>
+-->
+
+<!-- Issue with the let item of data  -->
+<div class="col-md-4 mb-4" *ngFor="let item of myData">
+    <h5>Hello I am in {{item.destination}}</h5>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ item.destinationImage }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{item.destination}}</h5>
+            <p class="card-text">{{item.destinationDescription}}</p>
+            <a [routerLink]="'/accomodations/'+item.packageId" class="btn btn-primary">Get accomodation</a>
+            <a [routerLink]="'/activities/'+item.packageId" class="btn btn-primary">Get activities</a>
+            <a class="btn btn-primary">Budget:{{item.totalBudget}}</a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between mb-3">
+    <button (click)="prev()" class="btn btn-outline-dark btn-floating m-1 me-auto">Prev</button>
+    <button (click)="next()" class="btn btn-outline-dark btn-floating m-1 ms-auto">Next</button>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+<p>userdashboard works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="top">
+    <div>
+        <a class="navbar-brand" href="#"><img src="" alt="trip"></a>
+    </div>
+    <div class="d-flex bar">
+        <div class="form-outline">
+            <!-- <form [formGroup]="searchPackage" class="form-inline ml-auto d-flex mt-1">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search Destinations"
+                        formControlName="searchTerm">
+                </div>
+                <div>
+                    <button class="btn btn-outline-light ml-2" type="submit">Search</button>
+                </div>
+            </form> -->
+        </div>
+        <div wishlist>
+            <a class="btn btn-outline-light btn-floating m-1 wishlist"  [routerLink]="'/itinerary'">Itinerary</a>
+        </div>
+    </div>
+</nav><p>accommodations works!</p>
+  <div class="container d-flex justify-content-start align-items-center mt-5 mb-5 " *ngFor = "let item of myAccomodation">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ item.hotelImage}}" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{item.hotelName}}</h5>
+          <p class="card-text">{{item.hotelDescription}}</p>
+          <button></button>
+          <button type="submit" class="btn btn-primary" (click)="addToItinerary()" >Add to itinerary</button>
+      </div>
+  </div>
+  </div>

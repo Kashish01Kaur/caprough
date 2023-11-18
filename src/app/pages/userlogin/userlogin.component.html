@@ -1,0 +1,19 @@
+<p>userlogin works!</p>
+<div class="user-signin-container"> 
+    <form [formGroup]="signInForm" (submit)="UserSignIn()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Sign In</button>
+      <button mat-raised-button color="primary" [routerLink]="'/useregister'"routerLinkActive="active">Sign Up</button>
+    </form>
+    
+  </div>
+

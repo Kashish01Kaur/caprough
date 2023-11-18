@@ -1,0 +1,23 @@
+
+<app-navbar></app-navbar>
+
+<div class="carousel-container">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+        <img src="https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsJTIwcGxhbm5pbmd8ZW58MHx8MHx8fDA%3D" alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="https://image.cnbcfm.com/api/v1/image/107185268-1674841615778-gettyimages-1457910259-a7404995.jpeg?v=1684929601" alt="Random slide">
+    </ng-template>
+    <ng-template ngbSlide>
+        <img src="https://rs.projects-abroad.com.au/v1/products/travel-the-world-resize-product-61dc5a672d409.[1090].png" alt="Random slide">
+    </ng-template>
+  </ngb-carousel>
+  
+  <div class="login-container">
+    <button class="gradient-button"[routerLink]="'/adminlogin'" routerLinkActive="active">Admin</button>
+    <button class="gradient-button"[routerLink]="'/userlogin'" routerLinkActive="active">User</button>
+  </div>
+</div>
+
+<app-footer></app-footer> 

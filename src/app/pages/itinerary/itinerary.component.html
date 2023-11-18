@@ -1,0 +1,11 @@
+<p>itinerary works!</p>
+<div *ngFor="let item of itineraryItems; let i=index">
+<img [src]="item.hotelImage">
+<h4>{{item.hotelName}}</h4>
+<button  (click)="onDelete(item.hotelId)">Remove </button>
+</div>
+<!--MAP INTEGRATION-->
+<div class="col-md" style="padding:5vh 10vh;">
+    <div class="px-2 " style="height:61vh;border:2px solid black;">
+    <div id="map" style="height:60vh;"></div>
+</div>
